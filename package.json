@@ -5,7 +5,9 @@
   "main": "delChatChannels.js",
   "scripts": {
     "test": "jest",
-    "start": "node delChatChannels.js"
+    "start": "node delChatChannels.js && node delChatUsers.js",
+    "delChannels": "node delChatChannels.js",
+    "delUsers": "node delChatUsers.js"
   },
   "jest": {
     "testEnvironment": "node"

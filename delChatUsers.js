@@ -3,13 +3,13 @@ const twi = require('./twi.js');
 
 const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID;
 
-twi.getChannelList(serviceSid)
-.then(channels => {
-    console.log(`対象チャンネル件数は、${channels.length}件です。`);
-    channels.forEach(c => {
-        twi.delChannel(serviceSid, c.sid)
+twi.getUserList(serviceSid)
+.then(users => {
+    console.log(`対象ユーザ件数は、${users.length}件です。`);
+    users.forEach(u => {
+        twi.delUser(serviceSid, u.sid)
         .then(() => {
-            console.log(`Deleted. ${c.sid}`);
+            console.log(`Deleted. ${u.sid}`);
         })
         .catch(err => {
             console.error(err);

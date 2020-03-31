@@ -27,3 +27,27 @@ exports.delChannel = (serviceSid, channelSid) => {
         })
     });
 };
+
+exports.getUserList = (serviceSid) => {
+    return new Promise((resolve, reject) => {
+        client.chat.services(serviceSid).users.list()
+        .then(users => {
+            resolve(users);
+        })
+        .catch(err => {
+            reject(err);
+        })
+    });
+};
+
+exports.delUser = (serviceSid, userSid) => {
+    return new Promise((resolve, reject) => {
+        client.chat.services(serviceSid).users(userSid).remove()
+        .then(() => {
+            resolve();
+        })
+        .catch(err => {
+            reject(err);
+        })
+    });
+};

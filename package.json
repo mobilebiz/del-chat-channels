@@ -1,0 +1,22 @@
+{
+  "name": "del-chat-channels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "delChatChannels.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node delChatChannels.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "Katsumi Takahashi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "twilio": "^3.41.1"
+  },
+  "devDependencies": {
+    "jest": "^25.2.4"
+  }
+}

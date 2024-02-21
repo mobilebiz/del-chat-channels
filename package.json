@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "twilio": "^4.7.1"
+    "twilio": "^4.22.0"
   },
   "devDependencies": {
     "jest": "^29.3.1"
